@@ -1,0 +1,130 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: black;
+    overflow: hidden; /* Para evitar rolagem quando o botão está centralizado */
+}
+
+#start-screen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2; /* Coloca a tela inicial sobre o tabuleiro */
+}
+
+#back-btn {
+    font-family: 'Press Start 2P', cursive; /* Fonte pixelada, você pode adicionar no seu HTML ou usar uma similar */
+    background-color: yellow;
+    color: black;
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#game-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0e0d0d; /* Cor de fundo opcional */
+    z-index: 1; /* O tabuleiro fica atrás da tela inicial e do botão de reinício */
+}
+
+/* Define o estilo do tabuleiro */
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(30px, 1fr));
+    width: 100%;
+    height: 100%;
+}
+
+/* Estilo das células */
+.cell {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Para posicionar o conteúdo absoluto */
+    background-size: cover; /* Garante que a imagem cubra toda a célula */
+}
+
+/* Estilos para os pacpys */
+.cell.pacpy-0 {
+    background-image: url('pacpy1.png'); /* Imagem do Pac-Py amarelo */
+    /* Pitão ícones criados por Freepik - Flaticon: https://www.flaticon.com/br/icones-gratis/pitao */
+}
+
+.cell.pacpy-1 {
+    background-image: url('pacpy2.png'); /* Imagem do Pac-Py laranja */
+    /* Pitão ícones criados por Freepik - Flaticon: https://www.flaticon.com/br/icones-gratis/java */
+}
+
+/* Estilo dos fasminhas */
+.cell.fasminha-rosa {
+    background-image: url('fasminha1.png'); /* Imagem do fasminha rosa */
+    /* Fantasma ícones criados por Smashicons - Flaticon: https://www.flaticon.com/br/icones-gratis/fantasma */
+}
+
+.cell.fasminha-vermelho {
+    background-image: url('fasminha2.png'); /* Imagem do fasminha vermelho */
+    /* Medo ícones criados por Smashicons - Flaticon: https://www.flaticon.com/br/icones-gratis/medo */
+}
+
+.cell.fasminha-azul {
+    background-image: url('fasminha3.png'); /* Imagem do fasminha azul */
+    /* Fantasma ícones criados por Smashicons - Flaticon: https://www.flaticon.com/br/icones-gratis/fantasma */
+}
+
+/* Estilo dos pontos e paredes */
+.cell.pontinho {
+    background-color: green;
+    border-radius: 50%; /* Faz com que o ponto seja redondo */
+    width: 9px; /* Define o tamanho menor do ponto */
+    height: 9px; /* Define o tamanho menor do ponto */
+}
+
+.cell.parede {
+    background-color: rgb(2, 2, 2); /* Cor preta para paredes */
+    text-align: center;
+    line-height: 30px; /* Ajustado para melhor centralização do símbolo '#' */
+    color: #fff;
+    font-size: 20px; /* Ajuste do tamanho do símbolo '#' */
+}
+
+#info {
+    margin-top: 20px;
+}
+
+#start-btn, #restart-btn {
+    font-family: 'Press Start 2P', cursive; /* Fonte pixelada, você pode adicionar no seu HTML ou usar uma similar */
+    background-color: yellow;
+    color: black;
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer; /* Adicionado para indicar que é um botão clicável */
+    transition: background-color 0.3s, color 0.3s;
+    z-index: 3; /* Garante que o botão de reinício fique sobre o tabuleiro */
+}
+
+#restart-btn {
+    display: none; /* Inicialmente escondido */
+    position: absolute; /* Para garantir que ele se posicione sobre o tabuleiro */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centraliza o botão */
+}

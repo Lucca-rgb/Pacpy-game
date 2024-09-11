@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Press Start 2P', cursive; /* Fonte pixelada, você pode adicionar no seu HTML ou usar uma similar */
+    background-color: black;
+    color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+#welcome-screen {
+    width: 100%;
+}
+
+h1 {
+    font-size: 3em; /* Ajuste o tamanho da fonte conforme necessário */
+    margin-bottom: 20px;
+}
+
+#start-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.5em;
+    color: black;
+    background-color: yellow;
+    text-decoration: none;
+    border: 2px solid yellow;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#start-btn:hover {
+    background-color: black;
+    color: yellow;
+}
