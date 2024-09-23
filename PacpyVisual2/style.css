@@ -98,10 +98,12 @@ body {
 }
 
 .cell.parede {
-    background-color: rgb(2, 2, 2); /* Cor preta para paredes */
+    background-color: rgba(0, 255, 255, 0.329);
+    background-image: url('parede.png'); /* Adiciona a imagem de parede *//*<a href="https://www.flaticon.com/br/icones-gratis/muro-de-berlim" title="muro de berlim ícones">Muro de berlim ícones criados por Freepik - Flaticon</a>*/
+    background-size: cover; /* Garante que a imagem cubra toda a célula */
     text-align: center;
     line-height: 30px; /* Ajustado para melhor centralização do símbolo '#' */
-    color: #fff;
+    color: #ffffff00;
     font-size: 20px; /* Ajuste do tamanho do símbolo '#' */
 }
 
