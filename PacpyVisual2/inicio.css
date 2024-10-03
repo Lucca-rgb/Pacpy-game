@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Press Start 2P', cursive; /* Fonte pixelada, você pode adicionar no seu HTML ou usar uma similar */
+    font-family: 'Press Start 2P', cursive;
     background-color: black;
     color: yellow;
     display: flex;
@@ -16,7 +16,7 @@ body {
 }
 
 h1 {
-    font-size: 3em; /* Ajuste o tamanho da fonte conforme necessário */
+    font-size: 3em;
     margin-bottom: 20px;
 }
 
