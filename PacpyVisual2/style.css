@@ -6,7 +6,7 @@ body {
     height: 100vh;
     margin: 0;
     background-color: black;
-    overflow: hidden; /* Para evitar rolagem quando o botão está centralizado */
+    overflow: hidden;
 }
 
 #start-screen {
@@ -15,11 +15,11 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    z-index: 2; /* Coloca a tela inicial sobre o tabuleiro */
+    z-index: 2;
 }
 
 #back-btn {
-    font-family: 'Press Start 2P', cursive; /* Fonte pixelada, você pode adicionar no seu HTML ou usar uma similar */
+    font-family: 'Press Start 2P', cursive;
     background-color: yellow;
     color: black;
     margin-top: 10px;
@@ -38,11 +38,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #0e0d0d; /* Cor de fundo opcional */
-    z-index: 1; /* O tabuleiro fica atrás da tela inicial e do botão de reinício */
+    background-color: #0e0d0d;
+    z-index: 1;
 }
 
-/* Define o estilo do tabuleiro */
 #game-board {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
@@ -51,20 +50,18 @@ body {
     height: 100%;
 }
 
-/* Estilo das células */
 .cell {
     width: 30px;
     height: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative; /* Para posicionar o conteúdo absoluto */
-    background-size: cover; /* Garante que a imagem cubra toda a célula */
+    position: relative;
+    background-size: cover;
 }
 
-/* Estilos para os pacpys */
 .cell.pacpy-0 {
-    background-image: url('pacpy1.png'); /* Imagem do Pac-Py amarelo */
+    background-image: url('pacpy1.png');
     /* Pitão ícones criados por Freepik - Flaticon: https://www.flaticon.com/br/icones-gratis/pitao */
 }
 
@@ -73,7 +70,7 @@ body {
     /* Pitão ícones criados por Freepik - Flaticon: https://www.flaticon.com/br/icones-gratis/java */
 }
 
-/* Estilo dos fasminhas */
+
 .cell.fasminha-rosa {
     background-image: url('fasminha1.png'); /* Imagem do fasminha rosa */
     /* Fantasma ícones criados por Smashicons - Flaticon: https://www.flaticon.com/br/icones-gratis/fantasma */
@@ -89,22 +86,21 @@ body {
     /* Fantasma ícones criados por Smashicons - Flaticon: https://www.flaticon.com/br/icones-gratis/fantasma */
 }
 
-/* Estilo dos pontos e paredes */
 .cell.pontinho {
     background-color: green;
-    border-radius: 50%; /* Faz com que o ponto seja redondo */
-    width: 9px; /* Define o tamanho menor do ponto */
-    height: 9px; /* Define o tamanho menor do ponto */
+    border-radius: 50%;
+    width: 9px;
+    height: 9px;
 }
 
 .cell.parede {
     background-color: rgba(0, 255, 255, 0.329);
     background-image: url('parede.png'); /* Adiciona a imagem de parede *//*<a href="https://www.flaticon.com/br/icones-gratis/muro-de-berlim" title="muro de berlim ícones">Muro de berlim ícones criados por Freepik - Flaticon</a>*/
-    background-size: cover; /* Garante que a imagem cubra toda a célula */
+    background-size: cover;
     text-align: center;
-    line-height: 30px; /* Ajustado para melhor centralização do símbolo '#' */
+    line-height: 30px; 
     color: #ffffff00;
-    font-size: 20px; /* Ajuste do tamanho do símbolo '#' */
+    font-size: 20px;
 }
 
 #info {
@@ -112,21 +108,21 @@ body {
 }
 
 #start-btn, #restart-btn {
-    font-family: 'Press Start 2P', cursive; /* Fonte pixelada, você pode adicionar no seu HTML ou usar uma similar */
+    font-family: 'Press Start 2P', cursive;
     background-color: yellow;
     color: black;
     margin-top: 10px;
     padding: 10px 20px;
     font-size: 16px;
-    cursor: pointer; /* Adicionado para indicar que é um botão clicável */
+    cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
-    z-index: 3; /* Garante que o botão de reinício fique sobre o tabuleiro */
+    z-index: 3;
 }
 
 #restart-btn {
-    display: none; /* Inicialmente escondido */
-    position: absolute; /* Para garantir que ele se posicione sobre o tabuleiro */
+    display: none;
+    position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Centraliza o botão */
+    transform: translate(-50%, -50%);
 }
