@@ -25,3 +25,7 @@ With engaging graphics and dynamic gameplay, **Pacpy-game** offers a delightful 
 Com gráficos envolventes e jogabilidade dinâmica, **Pacpy-game** oferece uma experiência agradável para os fãs de jogos de arcade clássicos! 🌟
 
 [Read in English](#english-version)
+
+## Preview of the game / Pré-visualização do jogo
+
+![PacpyVisual](https://github.com/user-attachments/assets/e82edbb4-9c3a-4059-be2a-7ba955457512)
