@@ -1,128 +1,141 @@
+/* Basic styling for the body */
 body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: black;
-    overflow: hidden;
+    font-family: Arial, sans-serif; /* Sets the font for the entire page */
+    display: flex; /* Uses flexbox to center elements */
+    justify-content: center; /* Horizontally centers the content */
+    align-items: center; /* Vertically centers the content */
+    height: 100vh; /* Makes the body take the full height of the viewport */
+    margin: 0; /* Removes any default margin */
+    background-color: black; /* Sets the background color to black */
+    overflow: hidden; /* Hides any content that overflows the body */
 }
 
+/* Style for the start screen container */
 #start-screen {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    z-index: 2;
+    position: absolute; /* Positions it absolutely within the body */
+    top: 50%; /* Moves the screen to the vertical center */
+    left: 50%; /* Moves the screen to the horizontal center */
+    transform: translate(-50%, -50%); /* Adjusts for the element’s size, truly centering it */
+    text-align: center; /* Centers the text inside */
+    z-index: 2; /* Ensures the start screen is above other elements */
 }
 
+/* Style for the back button */
 #back-btn {
-    font-family: 'Press Start 2P', cursive;
-    background-color: yellow;
-    color: black;
-    margin-top: 10px;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
+    font-family: 'Press Start 2P', cursive; /* Uses a retro font */
+    background-color: yellow; /* Yellow background for the button */
+    color: black; /* Black text */
+    margin-top: 10px; /* Adds space above the button */
+    padding: 10px 20px; /* Adds padding around the button text */
+    font-size: 16px; /* Sets the font size */
+    cursor: pointer; /* Makes the cursor a pointer on hover */
+    transition: background-color 0.3s, color 0.3s; /* Adds a smooth transition on hover */
 }
 
+/* Style for the main game container */
 #game-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #0e0d0d;
-    z-index: 1;
+    position: absolute; /* Positions the game container absolutely */
+    top: 0; /* Aligns the container to the top */
+    left: 0; /* Aligns the container to the left */
+    width: 100vw; /* Makes the container take full viewport width */
+    height: 100vh; /* Makes the container take full viewport height */
+    display: flex; /* Uses flexbox to align game content */
+    justify-content: center; /* Horizontally centers the game board */
+    align-items: center; /* Vertically centers the game board */
+    background-color: #0e0d0d; /* Dark background for the game container */
+    z-index: 1; /* Sets a lower stack order than the start screen */
 }
 
+/* Style for the game board grid */
 #game-board {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
-    grid-template-rows: repeat(auto-fit, minmax(30px, 1fr));
-    width: 100%;
-    height: 100%;
+    display: grid; /* Uses a CSS grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(30px, 1fr)); /* Creates flexible columns */
+    grid-template-rows: repeat(auto-fit, minmax(30px, 1fr)); /* Creates flexible rows */
+    width: 100%; /* Takes up the full width of the container */
+    height: 100%; /* Takes up the full height of the container */
 }
 
+/* Common cell styling */
 .cell {
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    background-size: cover;
+    width: 30px; /* Sets the width of each cell */
+    height: 30px; /* Sets the height of each cell */
+    display: flex; /* Uses flexbox to center content inside each cell */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    position: relative; /* Allows positioning of child elements */
+    background-size: cover; /* Ensures background images cover the cell */
 }
 
+/* Specific styling for each Pacpy */
 .cell.pacpy-0 {
-    background-image: url('pacpy1.png');
-    /* Pitão ícones criados por Freepik - Flaticon: https://www.flaticon.com/br/icones-gratis/pitao */
+    background-image: url('pacpy1.png'); /* Sets the image for Pacpy 1 */
+    /* Icon by Freepik from Flaticon: https://www.flaticon.com/br/icones-gratis/pitao */
 }
 
 .cell.pacpy-1 {
-    background-image: url('pacpy2.png'); /* Imagem do Pac-Py laranja */
-    /* Pitão ícones criados por Freepik - Flaticon: https://www.flaticon.com/br/icones-gratis/java */
+    background-image: url('pacpy2.png'); /* Sets the image for Pacpy 2 */
+    /* Icon by Freepik from Flaticon: https://www.flaticon.com/br/icones-gratis/java */
 }
 
-
+/* Specific styling for each Fasminha */
 .cell.fasminha-rosa {
-    background-image: url('fasminha1.png'); /* Imagem do fasminha rosa */
-    /* Fantasma ícones criados por Smashicons - Flaticon: https://www.flaticon.com/br/icones-gratis/fantasma */
+    background-image: url('fasminha1.png'); /* Sets the image for the pink Fasminha */
+    /* Icon by Smashicons from Flaticon: https://www.flaticon.com/br/icones-gratis/fantasma */
 }
 
 .cell.fasminha-vermelho {
-    background-image: url('fasminha2.png'); /* Imagem do fasminha vermelho */
-    /* Medo ícones criados por Smashicons - Flaticon: https://www.flaticon.com/br/icones-gratis/medo */
+    background-image: url('fasminha2.png'); /* Sets the image for the red Fasminha */
+    /* Icon by Smashicons from Flaticon: https://www.flaticon.com/br/icones-gratis/medo */
 }
 
 .cell.fasminha-azul {
-    background-image: url('fasminha3.png'); /* Imagem do fasminha azul */
-    /* Fantasma ícones criados por Smashicons - Flaticon: https://www.flaticon.com/br/icones-gratis/fantasma */
+    background-image: url('fasminha3.png'); /* Sets the image for the blue Fasminha */
+    /* Icon by Smashicons from Flaticon: https://www.flaticon.com/br/icones-gratis/fantasma */
 }
 
+/* Styling for the points on the board */
 .cell.pontinho {
-    background-color: green;
-    border-radius: 50%;
-    width: 9px;
-    height: 9px;
+    background-color: green; /* Green background for the point cell */
+    border-radius: 50%; /* Makes the point cell round */
+    width: 9px; /* Sets the width of the point */
+    height: 9px; /* Sets the height of the point */
 }
 
+/* Styling for the walls in the maze */
 .cell.parede {
-    background-color: rgba(0, 255, 255, 0.329);
-    background-image: url('parede.png'); /* Adiciona a imagem de parede *//*<a href="https://www.flaticon.com/br/icones-gratis/muro-de-berlim" title="muro de berlim ícones">Muro de berlim ícones criados por Freepik - Flaticon</a>*/
-    background-size: cover;
-    text-align: center;
-    line-height: 30px; 
-    color: #ffffff00;
-    font-size: 20px;
+    background-color: rgba(0, 255, 255, 0.329); /* Transparent light cyan background */
+    background-image: url('parede.png'); /* Adds the wall image */
+    /* Icon by Freepik from Flaticon: https://www.flaticon.com/br/icones-gratis/muro-de-berlim */
+    background-size: cover; /* Ensures the wall image covers the cell */
+    text-align: center; /* Centers the text inside the cell */
+    line-height: 30px; /* Vertically aligns the text */
+    color: #ffffff00; /* Makes the text invisible */
+    font-size: 20px; /* Sets the font size for the text (invisible here) */
 }
 
+/* Styling for the information section below the game */
 #info {
-    margin-top: 20px;
+    margin-top: 20px; /* Adds margin to the top */
 }
 
+/* Button styles for start and restart */
 #start-btn, #restart-btn {
-    font-family: 'Press Start 2P', cursive;
-    background-color: yellow;
-    color: black;
-    margin-top: 10px;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-    z-index: 3;
+    font-family: 'Press Start 2P', cursive; /* Retro font style */
+    background-color: yellow; /* Yellow background for buttons */
+    color: black; /* Black text color */
+    margin-top: 10px; /* Adds space above the button */
+    padding: 10px 20px; /* Padding inside the button */
+    font-size: 16px; /* Font size for the button text */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+    z-index: 3; /* Ensures buttons are on top of other elements */
 }
 
+/* Specific styling for the restart button */
 #restart-btn {
-    display: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    display: none; /* Hides the restart button by default */
+    position: absolute; /* Positions it absolutely within the container */
+    top: 50%; /* Centers vertically */
+    left: 50%; /* Centers horizontally */
+    transform: translate(-50%, -50%); /* Adjusts for the button's size */
 }
