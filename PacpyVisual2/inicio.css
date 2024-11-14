@@ -1,38 +1,43 @@
+/* General body style */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Press Start 2P', cursive;
-    background-color: black;
-    color: yellow;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    text-align: center;
+    margin: 0; /* Removes the default margin */
+    padding: 0; /* Removes the default padding */
+    font-family: 'Press Start 2P', cursive; /* Uses a retro, pixelated font for a unique look */
+    background-color: black; /* Sets the background color to black */
+    color: yellow; /* Sets the text color to yellow for contrast */
+    display: flex; /* Uses flexbox for layout */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    height: 100vh; /* Makes the body take up the full height of the viewport */
+    text-align: center; /* Centers the text inside the body */
 }
 
+/* Welcome screen container style */
 #welcome-screen {
-    width: 100%;
+    width: 100%; /* Makes the welcome screen container take up the full width */
 }
 
+/* Style for the main heading (h1) */
 h1 {
-    font-size: 3em;
-    margin-bottom: 20px;
+    font-size: 3em; /* Increases the font size for the heading */
+    margin-bottom: 20px; /* Adds space below the heading */
 }
 
+/* Style for the start button */
 #start-btn {
-    display: inline-block;
-    padding: 15px 30px;
-    font-size: 1.5em;
-    color: black;
-    background-color: yellow;
-    text-decoration: none;
-    border: 2px solid yellow;
-    border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s;
+    display: inline-block; /* Makes the button inline, but allows padding */
+    padding: 15px 30px; /* Adds padding inside the button */
+    font-size: 1.5em; /* Increases the font size inside the button */
+    color: black; /* Sets the text color to black */
+    background-color: yellow; /* Sets the background color to yellow */
+    text-decoration: none; /* Removes the underline from the link */
+    border: 2px solid yellow; /* Adds a yellow border to the button */
+    border-radius: 5px; /* Rounds the corners of the button */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for background and text color changes */
 }
 
+/* Hover effect for the start button */
 #start-btn:hover {
-    background-color: black;
-    color: yellow;
+    background-color: black; /* Changes the background color to black when hovered */
+    color: yellow; /* Changes the text color to yellow when hovered */
 }
